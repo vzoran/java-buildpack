@@ -17,6 +17,6 @@
 ---
 version: 2015.+
 repository_root: ! '{default.repository.root}/your-kit/{platform}/{architecture}'
-enabled: false
+enabled: true
 port: 10001
 default_session_name: ! '$(expr "$VCAP_APPLICATION" : ''.*application_name[": ]*\([-_a-zA-Z0-9]*\).*''):$(expr "$VCAP_APPLICATION" : ''.*instance_index[": ]*\([[:digit:]]*\).*'')'
