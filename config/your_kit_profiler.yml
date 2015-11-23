@@ -15,7 +15,7 @@
 
 # JMX configuration
 ---
-version: 2015.15076.+
+version: 2015.+
 repository_root: ! 'http://download.pivotal.io.s3.amazonaws.com/your-kit/{platform}/{architecture}'
 enabled: true
 port: 10001

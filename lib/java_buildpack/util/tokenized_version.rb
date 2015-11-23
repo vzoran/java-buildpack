@@ -34,7 +34,7 @@ module JavaBuildpack
         @version = version
         @version = WILDCARD if !@version && allow_wildcards
 
-        puts "version '#{version}'"
+        # puts "version '#{version}'"
         
         major, tail      = major_or_minor_and_tail @version
         minor, tail      = major_or_minor_and_tail tail
@@ -111,7 +111,7 @@ module JavaBuildpack
 
           micro, qualifier = tokens[1..-1]
 
-          puts "micro '#{micro} #{qualifier}'"
+          # puts "micro '#{micro} #{qualifier}'"
           fail "Invalid micro version '#{micro}'" unless valid_major_minor_or_micro micro
           fail "Invalid qualifier '#{qualifier}'" unless valid_qualifier qualifier
         end
