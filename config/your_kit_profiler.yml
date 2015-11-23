@@ -16,7 +16,7 @@
 # JMX configuration
 ---
 version: 2015.15076.+
-repository_root: ! '{default.repository.root}/your-kit/{platform}/{architecture}'
+repository_root: ! 'http://download.pivotal.io.s3.amazonaws.com/your-kit/{platform}/{architecture}'
 enabled: true
 port: 10001
 default_session_name: ! '$(expr "$VCAP_APPLICATION" : ''.*application_name[": ]*\([-_a-zA-Z0-9]*\).*''):$(expr "$VCAP_APPLICATION" : ''.*instance_index[": ]*\([[:digit:]]*\).*'')'
