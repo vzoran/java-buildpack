@@ -17,6 +17,6 @@
 ---
 version: 2015.+
 repository_root: ! 'http://download.pivotal.io.s3.amazonaws.com/your-kit/{platform}/{architecture}'
-enabled: true
+enabled: false
 port: 10001
 default_session_name: ! '$(expr "$VCAP_APPLICATION" : ''.*application_name[": ]*\([-_a-zA-Z0-9]*\).*''):$(expr "$VCAP_APPLICATION" : ''.*instance_index[": ]*\([[:digit:]]*\).*'')'
