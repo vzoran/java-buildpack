@@ -57,7 +57,7 @@ module JavaBuildpack
       private
 
       def file_name
-        @droplet.sandbox + "#{@droplet.component_id}-#{@version}"
+        @droplet.sandbox + "#{@droplet.component_id}-#{@version}.so"
       end
 
       def logs
