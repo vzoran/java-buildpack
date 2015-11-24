@@ -45,8 +45,6 @@ module JavaBuildpack
           .add_agentpath_with_props(file_name,
                                     'dir'  => snapshots, 'logdir' => logs,
                                     'port' => port, 'sessionname' => session_name)
-                                    
-          puts "'#{@file_name}' '#{@port}' #{@session_name} #{@logs}"
       end
 
       protected
