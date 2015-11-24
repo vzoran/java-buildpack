@@ -86,8 +86,6 @@ module JavaBuildpack
 
       @logger.debug { "Release Payload:\n#{payload}" }
 
-      puts "      Release Payload: #{payload}"
-
       payload
     end
 
