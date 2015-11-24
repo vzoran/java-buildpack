@@ -65,7 +65,7 @@ module JavaBuildpack
       end
 
       def port
-        @configuration['port'] || 10_001
+        10_001
       end
 
       def session_name
