@@ -65,7 +65,7 @@ module JavaBuildpack
       end
 
       def port
-        10_001
+        "11111"
       end
 
       def session_name
