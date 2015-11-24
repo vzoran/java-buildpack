@@ -85,7 +85,6 @@ module JavaBuildpack
       }.to_yaml
 
       @logger.debug { "Release Payload:\n#{payload}" }
-      @logger.error { "Release Payload:\n#{payload}" }
 
       puts "      Release Payload: #{payload}"
 
