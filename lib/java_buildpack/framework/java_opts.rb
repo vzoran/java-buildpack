@@ -42,6 +42,7 @@ module JavaBuildpack
       # (see JavaBuildpack::Component::BaseComponent#release)
       def release
         @droplet.java_opts.concat parsed_java_opts
+        puts "java opt: '#{parsed_java_opts}'"
       end
 
       private
