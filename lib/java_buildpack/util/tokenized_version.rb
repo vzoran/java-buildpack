@@ -107,11 +107,11 @@ module JavaBuildpack
           qualifier = nil
         else
           fail "Invalid version '#{s}': must not end in '_'" if s[-1] == '_'
-          tokens = s.match(/^([^\_]+)(?:_(.*))?/)
+          
+            tokens = s.match(/^([^\_\.]+)(?:[\_\.](.*))?/)
 
           micro, qualifier = tokens[1..-1]
 
-          # puts "micro '#{micro} #{qualifier}'"
           fail "Invalid micro version '#{micro}'" unless valid_major_minor_or_micro micro
           fail "Invalid qualifier '#{qualifier}'" unless valid_qualifier qualifier
         end
@@ -155,7 +155,7 @@ module JavaBuildpack
       end
 
       def valid_major_minor_or_micro(major_minor_or_micro)
-        major_minor_or_micro =~ /^[\d\.]*$/ || major_minor_or_micro =~ /^\+$/
+        major_minor_or_micro =~ /^[\d]*$/ || major_minor_or_micro =~ /^\+$/
       end
 
       def valid_qualifier(qualifier)
