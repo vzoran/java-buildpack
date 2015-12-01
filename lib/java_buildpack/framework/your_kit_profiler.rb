@@ -44,7 +44,8 @@ module JavaBuildpack
         @droplet.java_opts
           .add_agentpath_with_props(file_name,
                                     'dir'  => snapshots, 'logdir' => logs,
-                                    'port' => port, 'sessionname' => session_name)
+                                    'port' => port, 'sessionname' => session_name, 
+                                    'delay' => delay_time)
       end
 
       protected
@@ -70,6 +71,10 @@ module JavaBuildpack
 
       def session_name
         @configuration['default_session_name'] || @application.details['application_name']
+      end
+      
+      def delay_time
+        @configuration['delay_time'] || '10000'
       end
 
       def snapshots
